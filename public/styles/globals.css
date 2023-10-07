@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Georgia Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Regular"),
+    url("../fonts/georgia/georgia.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Georgia Bold";
+  font-style: normal;
+  font-weight: Bold;
+  src: local("Georgia Bold"),
+    url("../fonts/georgia/georgiab.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Sans Pro"),
+    url("../fonts/source-sans-pro/SourceSansPro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Semibold";
+  font-style: normal;
+  font-weight: Semibold;
+  src: local("Source Sans Pro Semibold"),
+    url("../fonts/source-sans-pro/SourceSansPro-Semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Bold";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Source Sans Pro Bold"),
+    url("../fonts/source-sans-pro/SourceSansPro-Bold.woff") format("woff");
+}
+
+.home-hero-section {
+  background-image: url("../assets/images/home-hero-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 542px;
+}
