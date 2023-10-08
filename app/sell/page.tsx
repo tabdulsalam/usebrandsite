@@ -1,12 +1,8 @@
 import React from "react";
-import Image from "next/image";
-import ItemImage from "@/public/assets/images/item1.png";
-import ProfileImage from "@/public/assets/images/profile1.png";
-import CommentImg from "@/public/assets/Icons/comment.svg";
-import LikeImg from "@/public/assets/Icons/like.svg";
-import CloseBtn from "@/public/assets/Icons/closebtn.svg";
+import Listing from "@/components/ui/listing";
 import DropdownSelect from "@/components/ui/dropdown-select";
 import IncrementSelect from "@/components/ui/increment-select";
+import { ListingData } from "@/lib/data";
 import {
   Locations,
   Brands,
@@ -28,69 +24,25 @@ export default function sell() {
         </div>
       </div>
       <div className="grid grid-cols-[1.6fr_1fr] items-start border-t-[1px] border-veryLigthBlack">
-        <div className=" grid grid-cols-[1.2fr_1.7fr] items-center py-5  pr-6 pl-12 border-b-[1px] border-veryLigthBlack  ">
-          <div className="relative">
-            <Image
-              className="rounded-md object-cover"
-              src={ItemImage}
-              width={280}
-              height={320}
-              alt=""
+        <div>
+          {ListingData.map((listing) => (
+            <Listing
+              key={listing.id}
+              id={listing.id}
+              itemImage={listing.itemImage}
+              profileImage={listing.profileImage}
+              price={listing.price}
+              nameOfItem={listing.nameOfItem}
+              condition={listing.condition}
+              colour={listing.colour}
+              size={listing.size}
+              location={listing.location}
+              category={listing.category}
+              sex={listing.sex}
+              noOfComment={listing.noOfComment}
+              noOfLikes={listing.noOfLikes}
             />
-            <Image
-              className="absolute bottom-2 left-2"
-              src={ProfileImage}
-              width={50}
-              height={50}
-              alt=""
-            />
-          </div>
-
-          <div className=" flex justify-between">
-            <div className="flex flex-col gap-3 ">
-              <div className="font-sourceSansProRegular text-2xl  text-darkGrey ">
-                Nike Blazer 2021
-              </div>
-              <div className="font-sourceSansProBold text-3xl text-darkGrey ">
-                N20,000.00
-              </div>
-              <div className=" font-sourceSansProRegular text-2xl text-lightdarkGrey  ">
-                Condition: <span>Good</span>
-              </div>
-              <div className=" font-sourceSansProRegular text-2xl text-lightdarkGrey  ">
-                Colour: <span>Brown</span>
-              </div>
-              <div className=" font-sourceSansProRegular text-2xl text-lightdarkGrey  ">
-                Size: <span>42 small</span>
-              </div>
-              <div className=" font-sourceSansProRegular text-2xl text-lightdarkGrey  ">
-                Location: <span>Lagos</span>
-              </div>
-              <div className=" font-sourceSansProRegular text-2xl text-lightdarkGrey  ">
-                Category: <span>Sneakers </span>
-              </div>
-              <div className=" font-sourceSansProRegular text-2xl text-lightdarkGrey  ">
-                Sex: <span>Male </span>
-              </div>
-            </div>
-            <div className="flex flex-col justify-between items-end">
-              <Image src={CloseBtn} alt="" />
-              <div className="flex gap-2">
-                <div className="flex">
-                  <Image src={CommentImg} alt="" />
-                  <div className="font-sourceSansProRegular text-base mx-1">
-                    7
-                  </div>
-                </div>
-                <div className="flex">
-                  <Image src={LikeImg} alt="" />
-                  <div className="font-sourceSansProRegular text-base mx-1">
-                    25
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className="bg-bgGrey h-[904px] py-8 pl-8 pr-12">
@@ -122,7 +74,7 @@ export default function sell() {
                 <div className="text-lg text-darkGrey pb-[6px]">Colour</div>
                 <input
                   type="text"
-                  placeholder="Brown"
+                  placeholder="Colour"
                   className="bg-white  border-[1px] border-inputBorder w-[200px] rounded-2xl opacity-90 text-lg outline-none p-2  placeholder:text-darkGrey"
                 />
               </div>
@@ -130,7 +82,7 @@ export default function sell() {
                 <div className="text-lg text-darkGrey pb-[6px]">Size</div>
                 <input
                   type="text"
-                  placeholder="42 Small"
+                  placeholder="Size"
                   className="bg-white  border-[1px] border-inputBorder w-[200px] rounded-2xl opacity-90 text-lg outline-none p-2
                 placeholder:text-darkGrey"
                 />

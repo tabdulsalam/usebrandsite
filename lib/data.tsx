@@ -11,6 +11,31 @@ import Profile2 from "../public/assets/images/profile2.png";
 import Profile3 from "../public/assets/images/profile3.png";
 import Profile4 from "../public/assets/images/profile4.png";
 
+interface Item {
+  id: number;
+  itemImage: any;
+  profileImage: any;
+  price: string;
+  nameOfItem: string;
+  noOfComment: number;
+  noOfLikes: number;
+}
+interface Listing {
+  id: number;
+  itemImage: any;
+  profileImage: any;
+  price: string;
+  nameOfItem: string;
+  noOfComment: number;
+  noOfLikes: number;
+  condition: string;
+  colour: string;
+  size: string;
+  location: string;
+  category: string;
+  sex: string;
+}
+
 export const items: Item[] = [
   {
     id: 1,
@@ -86,15 +111,38 @@ export const items: Item[] = [
   },
 ];
 
-interface Item {
-  id: number;
-  itemImage: any;
-  profileImage: any;
-  price: string;
-  nameOfItem: string;
-  noOfComment: number;
-  noOfLikes: number;
-}
+export const ListingData: Listing[] = [
+  {
+    id: 1,
+    itemImage: Item1,
+    profileImage: Profile1,
+    price: "N20,000.00",
+    nameOfItem: "Nike Blazers 2021",
+    condition: "Good",
+    colour: "Brown",
+    size: "44 Small",
+    location: "Lagos",
+    category: "Sneaker",
+    sex: "Male",
+    noOfComment: 7,
+    noOfLikes: 25,
+  },
+  {
+    id: 2,
+    itemImage: Item3,
+    profileImage: Profile3,
+    price: "N13,000.00",
+    nameOfItem: "Valentino Gown",
+    condition: "Good",
+    colour: "Nude",
+    size: "Medium",
+    location: "Lagos",
+    category: "Dress",
+    sex: "Female",
+    noOfComment: 4,
+    noOfLikes: 15,
+  },
+];
 
 export const Locations = [
   "Abia",

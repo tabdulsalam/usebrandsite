@@ -8,9 +8,6 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      // sans: ["Roboto", "sans-serif"],
-      // serif: ["Italiana", "serif"],
-
       georgiaRegular: ["Georgia Regular"],
       georgiaBold: ["Georgia Bold"],
       sourceSansProRegular: ["Source Sans Pro Regular"],
@@ -28,6 +25,7 @@ const config: Config = {
         veryLigthBlack: "rgba(224, 224, 224, 1)",
         bgGrey: "rgba(112, 128, 144, 0.1)",
         inputBorder: "rgba(170, 170, 170, 1)",
+        bgLightGrey: "rgba(245, 245, 245, 1)",
         Green: "rgba(199, 239, 0, 1)",
       },
     },
